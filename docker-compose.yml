@@ -1,0 +1,60 @@
+# Docker Compose File For React-Dashboard-Demo
+version: "3.7"
+
+services:
+  ################################
+  #   Setup frontend container
+  ################################
+  frontend:
+    build: ./frontend
+    restart: always
+    command: yarn run start
+    expose:
+      - 3000
+      - 35729
+    ports:
+      - 3000:3000
+      - 35729:35729
+    volumes:
+      - ./frontend/src:/usr/src/app/src
+      - ./frontend/public:/usr/src/app/public
+    depends_on:
+      - backend
+    environment:
+    # FIX HOTRELOAD ON WINDOWS
+      - CHOKIDAR_USEPOLLING=true
+    links:
+      - backend
+
+  ################################
+  #   Setup backend container
+  ################################
+  backend:
+    build: ./backend
+    restart: always
+    expose:
+      - 4000
+    ports:
+      - 4000:4000
+    volumes:
+      - ./backend/src:/usr/src/app/src/
+    #depends_on:
+    #- db
+    command: yarn run dev
+
+  # Needs Implementation
+  ################################
+  #   Setup database container
+  ################################
+  
+  #db:
+  #  image: 
+  #  restart: always
+  #  volumes:
+  #    - 
+  #  expose:
+  #    - 
+  #  ports:
+  #    - 
+  #  environment:
+      

@@ -1,0 +1,18 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "Server for the React-Dashboard-Demo",
+    "main": "server.js",
+    "author": "William Conquest <ssq2900@autuni.ac.nz>",
+    "license": "MIT",
+    "scripts": {
+      "dev": "nodemon --watch src src/server.js",
+      "start": "node src/server.js",
+      "test": "echo \"No tests\""
+    },
+    "dependencies": {
+      "express": "^4.16.4",
+      "nodemon": "^1.18.9",
+      "pg": "^7.8.0"
+    }
+}
