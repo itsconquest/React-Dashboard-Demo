@@ -3,7 +3,7 @@ A reporting dashboard I am developing as part of learning React.JS & Node.JS. Th
 
 # Resources used in this project:
 - Packages and dependencies managed by Yarn package manager which you can find here: https://yarnpkg.com/en/
-- These beautiful graphs are with the react-chartjs-2 library: https://www.npmjs.com/package/react-chartjs-2.  
+- These beautiful graphs are created with the react-chartjs-2 library: https://www.npmjs.com/package/react-chartjs-2.  
     In future I plan on looking into d3.JS https://d3js.org/ to create more customized components.
 - Started from the create-react-app project by Facebook found here: https://github.com/facebook/create-react-app
 - Server code is based on the express.js web application framework: https://expressjs.com/
